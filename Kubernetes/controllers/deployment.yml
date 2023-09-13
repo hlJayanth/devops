@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ip-app-deployment
+  name: my-devp
 spec:
   replicas: 4
   selector:
@@ -11,9 +11,8 @@ spec:
     metadata:
       labels:
         app: ip-app
-    spec:
       containers:
       - name: ipapp
-        image: harshajain/ip-app:latest
+        image: jayanthhl/kube:latest
         ports:
         - containerPort: 8080
